@@ -1,6 +1,8 @@
 export interface DataTypeRegistry {}
 
-export function fetchRecord<T extends keyof DataTypeRegistry>(
+export function fetchRecord<T extends keyof DataTypeRegistry, P extends T>(
   arg: T,
-  data: `${T}_${number}`
-) {}
+  data: `${P}_${number}`
+): DataTypeRegistry[T] {
+  return {} as any;
+}
