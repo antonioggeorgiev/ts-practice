@@ -29,3 +29,5 @@ type isPillarMen = Includes<["Kars", "Esidisi", "Wamuu", "Santana"], "dw">;
 type Push<P extends unknown[], Q> = [...P, Q];
 
 type Unshift<P extends unknown[], Q> = [Q, ...P];
+
+type Parameters<T> = T extends (...args: infer P) => any ? P : never;
